@@ -18,18 +18,22 @@ import {
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 w-full z-50 px-6 py-8 flex justify-between items-center mix-blend-difference text-white">
+    <nav className="fixed top-0 w-full z-50 px-4 sm:px-6 py-4 sm:py-6 flex justify-between items-center mix-blend-difference text-white">
       <motion.div 
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
-        className="font-display font-bold text-2xl tracking-tighter"
+        className="flex items-center"
       >
-        CFL YA_NY
+        <img 
+          src="/src/assets/IMG_6460.png" 
+          alt="CFL YA_NY" 
+          className="h-8 sm:h-10 w-auto"
+        />
       </motion.div>
       <motion.div 
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
-        className="flex gap-8 items-center"
+        className="flex gap-4 sm:gap-8 items-center"
       >
         <a 
           href="#about" 
@@ -37,7 +41,7 @@ const Navbar = () => {
             e.preventDefault();
             document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="text-sm font-medium hover:opacity-50 transition-opacity uppercase tracking-widest"
+          className="text-xs sm:text-sm font-medium hover:opacity-50 transition-opacity uppercase tracking-widest"
         >
           About
         </a>
@@ -47,7 +51,7 @@ const Navbar = () => {
             e.preventDefault();
             document.getElementById('stories')?.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="text-sm font-medium hover:opacity-50 transition-opacity uppercase tracking-widest"
+          className="text-xs sm:text-sm font-medium hover:opacity-50 transition-opacity uppercase tracking-widest"
         >
           Stories
         </a>
@@ -57,7 +61,7 @@ const Navbar = () => {
             e.preventDefault();
             document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="text-sm font-medium hover:opacity-50 transition-opacity uppercase tracking-widest"
+          className="text-xs sm:text-sm font-medium hover:opacity-50 transition-opacity uppercase tracking-widest"
         >
           Events
         </a>
@@ -353,7 +357,7 @@ const ImpactSection = () => {
   return (
     <section className="py-32 bg-black text-white overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
@@ -362,7 +366,7 @@ const ImpactSection = () => {
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="text-5xl md:text-7xl font-display font-bold mb-4 tracking-tighter">
+              <div className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-4 tracking-tighter">
                 {stat.value}<span className="text-white/30">{stat.suffix}</span>
               </div>
               <div className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">
@@ -394,20 +398,20 @@ const StoriesSection = () => {
               name: "Jovita Mesa",
               role: "Young Professional",
               quote: "The community here is real. No masks, just people seeking God and supporting each other through life's transitions.",
-              image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop"
+              image: "/src/assets/Jovita_story.jpeg"
             },
             {
               name: "Justin Dara",
               role: "College Student",
               quote: "Finding CFL YA_NY changed how I see my purpose. I'm not just a student; I'm part of something bigger.",
-              image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"
+              image: "/src/assets/Justin_story.jpg" // Assuming this is Justin's image, since we don't have a specific Justin_story.jpeg
             },
             
             {
               name: "Joanna Jacob",
               role: "Creative",
               quote: "I found my voice and my faith again. This isn't just a church; it's a family that moves together.",
-              image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop"
+              image: "/src/assets/Joanna_story.jpeg"
             }
           ].map((story, i) => (
             <motion.div
@@ -418,7 +422,7 @@ const StoriesSection = () => {
               viewport={{ once: true }}
               className="p-10 bg-white border border-black/5 rounded-[40px] hover:shadow-xl transition-all duration-500 group"
             >
-              <div className="w-20 h-20 rounded-full overflow-hidden mb-8 grayscale group-hover:grayscale-0 transition-all duration-500">
+              <div className="w-24 h-24 rounded-full overflow-hidden mb-8 grayscale group-hover:grayscale-0 transition-all duration-500">
                 <img src={story.image} alt={story.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
               <p className="text-xl font-light leading-relaxed mb-8 italic text-black/80">"{story.quote}"</p>
