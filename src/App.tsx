@@ -2,7 +2,10 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-
+import logoImg from "./assets/IMG_6460.png";
+import jovitaImg from "./assets/Jovita_story.jpeg";
+import justinImg from "./assets/Justin_story.jpg";
+import joannaImg from "./assets/Joanna_story.jpeg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { 
   Instagram, 
