@@ -28,7 +28,7 @@ const Navbar = () => {
         className="flex items-center"
       >
         <img 
-          src="/src/assets/IMG_6460.png" 
+          src="logoImg" 
           alt="CFL YA_NY" 
           className="h-8 sm:h-10 w-auto"
         />
@@ -401,20 +401,20 @@ const StoriesSection = () => {
               name: "Jovita Mesa",
               role: "Young Professional",
               quote: "The community here is real. No masks, just people seeking God and supporting each other through life's transitions.",
-              image: "/src/assets/Jovita_story.jpeg"
+              image: "jovitaImg"
             },
             {
               name: "Justin Dara",
               role: "College Student",
               quote: "Finding CFL YA_NY changed how I see my purpose. I'm not just a student; I'm part of something bigger.",
-              image: "/src/assets/Justin_story.jpg" // Assuming this is Justin's image, since we don't have a specific Justin_story.jpeg
+              image: "justinImg" // Assuming this is Justin's image, since we don't have a specific Justin_story.jpeg
             },
             
             {
               name: "Joanna Jacob",
               role: "Creative",
               quote: "I found my voice and my faith again. This isn't just a church; it's a family that moves together.",
-              image: "/src/assets/Joanna_story.jpeg"
+              image: "joannaImg"
             }
           ].map((story, i) => (
             <motion.div
