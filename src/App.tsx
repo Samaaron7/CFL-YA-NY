@@ -92,9 +92,9 @@ const Hero = () => {
             Christ For Life Church • Young Adults
           </span>
           <h1 className="text-6xl md:text-9xl font-display font-bold tracking-tighter leading-[0.9] mb-8 text-balance">
-            WHO ARE YOU <br />
-            <span className="italic font-light">WHEN THE CROWD</span> <br />
-            STARTS MOVING?
+            WELCOME TO<br />
+            <span className="italic font-light">CHRIST FOR LIFE CHURCH</span> <br />
+            YOUNG ADULTS
           </h1>
           <p className="max-w-xl mx-auto text-lg text-black/60 font-light leading-relaxed mb-12 text-balance">
             A community of young adults in New York discovering purpose, building faith, and moving together.
